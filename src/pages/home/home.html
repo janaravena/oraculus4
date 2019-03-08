@@ -1,0 +1,15 @@
+<ion-header>
+  <encabezado [PageTitle]="tituloPagina"></encabezado>
+</ion-header>
+
+<ion-content padding>
+  <h3>Modulo 3</h3>
+
+  <p>
+    Ejemplos avanzados con ionic
+  </p>
+
+  <button ion-button block (click)="tomarFoto()">Toma una foto</button>
+  <img [src]="image" *ngIf="image" />
+
+</ion-content>

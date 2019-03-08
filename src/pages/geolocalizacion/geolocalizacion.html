@@ -1,0 +1,63 @@
+<!--
+  Generated template for the GeolocalizacionPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+	<encabezado [PageTitle]="tituloPagina"></encabezado>
+</ion-header>
+
+<ion-content padding>
+
+	<ion-list no-lines>
+
+		<ion-item>
+			<ion-icon name="pin" item-start></ion-icon>
+			Actual
+			<ion-badge item-end>{{ posicionActual.latitude | number:'1.2-4'}}</ion-badge>
+			<ion-badge item-end>{{ posicionActual.longitude | number:'1.2-4' }}</ion-badge>
+		</ion-item>
+		<button ion-button full color="dark" (click)="obtenerPosicionActual()">Obtener posición actual</button>
+
+		<ion-item>
+			<ion-icon name="compass" item-start></ion-icon>
+			Tiempo Real Latitud - Longitud
+		</ion-item>
+
+		<ion-item>
+			<ion-badge item-end [color]="bagColor">{{ posicion.latitude}}</ion-badge>
+			<ion-badge item-end [color]="bagColor">{{ posicion.longitude}}</ion-badge>
+		</ion-item>
+		<button ion-button full color="danger" (click)="pararSeguimiento()">Parar de Seguir</button>
+		<button ion-button full color="secondary" (click)="posicionTiempoReal()">Iniciar Seguimiento</button>
+
+		<ion-item>
+			<ion-icon name="locate" item-start></ion-icon>
+			<h2>Dirección</h2>
+			<p *ngIf="direcion">{{ direcion.thoroughfare }} {{ direcion.subThoroughfare }}, {{ direcion.locality }}</p>
+		</ion-item>
+		<button ion-button full color="light" (click)="obtenerDireccion()">Obtener Dirección</button>
+
+		<ion-item class="seguimiento">
+			<ion-icon name="map" item-start></ion-icon>
+			Seguimiento
+			<ion-buttons end>
+				<button ion-button color="secondary" small icon-only (click)="iniciarBackgroundGeolocation()">
+					<ion-icon name="play"></ion-icon>
+				</button>
+				<button ion-button color="danger" small icon-only (click)="pararBackgroundGeolocation()">
+					<ion-icon name="pause"></ion-icon>
+				</button>
+			</ion-buttons>
+			<h3>Actual Latitud: {{locationTracker.lat}}</h3>
+  			<h3>Actual Longitud: {{locationTracker.lng}}</h3>
+		</ion-item>
+
+		<ion-item *ngFor="let location of locationTracker.locationsAll">
+			<p>{{ location.lat }} , {{ location.lng }}</p>
+		</ion-item>
+
+	</ion-list>
+
+</ion-content>
