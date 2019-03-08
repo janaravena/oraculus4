@@ -108,4 +108,8 @@
         <variable name="CONTENT_AUTHORITY" value="$PACKAGE_NAME" />
     </plugin>
     <engine name="android" spec="7.1.4" />
+    <plugin name="cordova-plugin-googlemaps" spec="2.5.2">
+        <variable name="API_KEY_FOR_ANDROID" value="AIzaSyAsxmssqx4ipiK_TUUFj0VsQ9Yuz3enjGM" />
+        <variable name="API_KEY_FOR_IOS" value="AIzaSyD-1sYzB4zT2oPdl6D6-qenG3gwg4rI3P4" />
+    </plugin>
 </widget>

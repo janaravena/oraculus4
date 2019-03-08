@@ -18,6 +18,8 @@ import { BackgroundGeolocation } from '@ionic-native/background-geolocation';
 
 import { TrackerProvider } from '../providers/tracker/tracker';
 
+import { GoogleMaps } from '@ionic-native/google-maps';
+
 @NgModule({
   declarations: [
     MyApp
@@ -40,7 +42,8 @@ import { TrackerProvider } from '../providers/tracker/tracker';
     Geolocation,
     NativeGeocoder,
     BackgroundGeolocation,
-    TrackerProvider
+    TrackerProvider,
+    GoogleMaps
   ]
 })
 export class AppModule {}
