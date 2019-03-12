@@ -86,8 +86,8 @@
         "CONTENT_AUTHORITY": "$PACKAGE_NAME"
       },
       "cordova-plugin-googlemaps": {
-        "API_KEY_FOR_ANDROID": "AIzaSyAsxmssqx4ipiK_TUUFj0VsQ9Yuz3enjGM",
-        "API_KEY_FOR_IOS": "AIzaSyD-1sYzB4zT2oPdl6D6-qenG3gwg4rI3P4"
+        "API_KEY_FOR_ANDROID": "KEY PARA ANDROID",
+        "API_KEY_FOR_IOS": "KEY PARA IOS"
       }
     },
     "platforms": [
